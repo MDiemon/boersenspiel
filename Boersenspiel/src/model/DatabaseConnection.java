@@ -2,7 +2,7 @@ package model;
 
 import java.util.List;
 
-import javax.management.Query;
+import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -38,7 +38,7 @@ public class DatabaseConnection {
 	
 
 	
-	public List<User> getBalance()
+	public List<User> getAllUser()
 	{
 		String queryString = "";
 		EntityManager em = emf.createEntityManager();
