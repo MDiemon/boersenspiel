@@ -20,29 +20,39 @@ public class DatabaseConnection {
 		}
 		return instance;
 	}
-	
-	/*public void save(GuestbookEntry gbe){
-		EntityManager em = emf.createEntityManager();
-		gbe.setCreated(new Date());
-		em.getTransaction().begin();
-		em.persist(gbe);
-		em.getTransaction().commit();
-	}
-	
-		public List<GuestbookEntry> getAll(){
-		String queryString = "SELECT gbe FROM GuestbookEntry gbe ORDER BY gbe.created DESC";
-		EntityManager em = emf.createEntityManager();
-		Query query = em.createQuery(queryString);
-		return query.getResultList();
-	}*/
-	
-
-	
+		
 	public List<User> getAllUser()
 	{
-		String queryString = "";
+		String queryString = "SELECT * FROM User";
 		EntityManager em = emf.createEntityManager();
 		Query query = em.createQuery(queryString);
 		return query.getResultList();
+	}
+	
+	public List<Stock> getAllStocks() {
+		String queryString = "SELECT * FROM Stock";
+		EntityManager em = emf.createEntityManager();
+		Query query = em.createQuery(queryString);
+		return query.getResultList();		
+	}
+	
+	public void	buyStock(int userID, int stockID) {
+		String queryString = "INSERT INTO BoughtStocks VALUES ('" + userID + "','" + stockID + "')";
+		EntityManager em = emf.createEntityManager();
+		Query query = em.createQuery(queryString);
+	}
+	
+	public void	sellStock(int userID, int stockID) {
+		String queryString = "DELETE FROM BoughtStocks WHERE UserID ='" + userID + "' AND StockID = '" + stockID + "')";
+		EntityManager em = emf.createEntityManager();
+		Query query = em.createQuery(queryString);
+	}
+	
+	// für neuen Aktientag
+	public void updateStock(int price, int priceChange)
+	{
+		String queryString = "UPDATE Stock SET Price = " + price + ", PriceChange = "+ priceChange;
+		EntityManager em = emf.createEntityManager();
+		Query query = em.createQuery(queryString);
 	}
 }
