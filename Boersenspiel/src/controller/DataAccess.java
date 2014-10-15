@@ -13,4 +13,9 @@ public class DataAccess {
 		ret.add("Test");
 		return ret;
 	}
+	
+	public static int getKontostand()
+	{
+		return 100;
+	}
 }
