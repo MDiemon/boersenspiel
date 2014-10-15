@@ -10,6 +10,7 @@ public class EndOfDay {
 		// Stock.setCost(Stock.getCost * rate);
 		
 		// User.setBalance(User.getBalance - TÄGL.KOSTEN)
+		
 	}
 	
 	public static double generateRate()
