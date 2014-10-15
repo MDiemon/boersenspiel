@@ -2,19 +2,21 @@ package controller;
 
 import java.util.ArrayList;
 
+import model.Stock;
+
 public class DataAccess {
 
-	public static ArrayList<String> getStocks() //TODO - ArrayList<Stock>
+	public static ArrayList<Stock> getStocks() //TODO - ArrayList<Stock>
 	{
 		//TODO
 		//return model.getStocks();
 		
-		ArrayList<String> ret = new ArrayList<String>();
-		ret.add("Test");
-		return ret;
+		ArrayList<Stock> stocks = new ArrayList<Stock>();
+		stocks.add(new Stock());
+		return stocks;
 	}
 	
-	public static int getKontostand()
+	public static int getBalance()
 	{
 		return 100;
 	}
