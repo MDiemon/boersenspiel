@@ -28,7 +28,12 @@
             <li class="active"><a href="aktienmarkt.jsp">Aktienmarkt</a></li>
           </ul>
 		  <form class="navbar-form navbar-right" role="form">
-            <button class="btn" type="button" onclick="return confirm('M&ouml;chten Sie den B&ouml;rsentag wirklich abschlie&szlig;en?')">B&oumlrsentag abschlie&szligen</button>
+		  <div class="form-group">
+			<p style="color:yellow; padding-right:20px; padding-top:10px;">Kontostand: 350,29&euro;</p>
+			</div>
+			<div class="form-group">
+            <button class="btn" type="button" onclick="EndOfDay.endDay()"></button>
+            </div>
           </form>
         </div><!--/.nav-collapse -->
       </div>

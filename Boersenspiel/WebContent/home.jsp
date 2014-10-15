@@ -27,9 +27,6 @@
 	            <li class="active"><a href="home.jsp">Home</a></li>
 	            <li><a href="aktienmarkt.jsp">Aktienmarkt</a></li>
 	          </ul>
-			  <form class="navbar-form navbar-right" role="form">
-	            <button id="button1"class="btn" type="button" onclick="return confirm('M&ouml;chten Sie den B&ouml;rsentag wirklich abschlie&szlig;en?')">B&oumlrsentag abschlie&szligen</button>
-	          </form>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </div>
@@ -37,8 +34,8 @@
 	    <div class="container">
 	
 	      <div class="starter-template">
-	        <h1>Kontostand:</h1>
-	        <p class="lead">354,50&euro;<br></p>
+	        <h1>Willkommen bei unserem Börsenspiel!</h1>
+	        <p class="lead">Marja Ahlbrand, Marc Bode, Marcel Diemon<br></p>
 	      </div>
 		  
 	    </div><!-- /.container -->
